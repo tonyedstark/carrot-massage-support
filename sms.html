@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Đăng ký dịch vụ</title>
+</head>
+<body>
+  <p>Đang mở ứng dụng SMS...</p>
+
+  <script>
+    const phone = "9199";
+    const body = encodeURIComponent("DK DATA CAMP2025");
+
+    const isiOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const smsLink = isiOS
+      ? `sms:${phone}&body=${body}`
+      : `sms:${phone}?body=${body}`;
+
+    window.location.href = smsLink;
+  </script>
+</body>
+</html>
